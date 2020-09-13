@@ -1,4 +1,5 @@
 const express = require("express");
+const CORS = require("cors");
 const app = express();
 
 //utils
@@ -24,6 +25,8 @@ const accounts = [
     name: "blackburger03",
   },
 ];
+
+app.use(CORS());
 
 app.get("/", async (req, res) => {
   const f = accounts.map(async (account) => {
