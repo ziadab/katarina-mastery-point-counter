@@ -10,7 +10,7 @@ const getChampionMastery = require("./utils/getChampionMastery")
 const accounts = [
   {
     region: "euw1",
-    name: "zaino02",
+    name: "katatoniaslayer",
   },
   {
     region: "euw1",
@@ -41,7 +41,7 @@ app.get("/", async (req, res) => {
     return kata[0].championPoints
   })
   Promise.all(f)
-    .catch((err) => console.log(err))
+    .catch((err) => console.log(err.response.data))
     .then((result) => {
       // after returning all the mastery poitn from each account
       // now we add them to each other
